@@ -4,7 +4,8 @@
 "z"는 1만큼 밀면 "a"가 됩니다.
 문자열 s와 거리 n을 입력받아 s를 n만큼 민 암호문을 만드는 함수, solution을 완성해 보세요.
 '''
-# from string import ascii_lowercase
+from curses.ascii import isupper
+from string import ascii_lowercase
 # def solution(s, n):
 #     alphabet = list(ascii_lowercase)
 
@@ -13,7 +14,17 @@
 
 # print(solution("AB", 1))
 
-s = "AB"
+alphabet = list(ascii_lowercase)
+s = "A B"
+answer = ''
 
-for _ in s:
-    print(_)
+# for _ in s:
+#     if _.isupper():
+#         print(_.lower())
+
+for i, j in zip(s, alphabet):
+    if i.isupper():
+        if i.lower() == j:
+            answer += alphabet.index(int(alphabet.index(j)+1))
+
+print(answer)
