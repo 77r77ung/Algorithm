@@ -35,3 +35,16 @@ def solution(id_list, report, k):
     return answer
 
 '''
+num = 1
+numbox = []
+for mul in range(1, 4, 1):
+    result = [_ for _ in list(map(int, str(num * mul)))]
+    print(result)
+    for i in result:
+        if i in numbox:
+            print("f")
+        else:
+            numbox.append(i)
+
+print(result)
+print(numbox)

@@ -6,3 +6,30 @@
 캐릭터는 항상 [0,0]에서 시작할 때 키 입력이 모두 끝난 뒤에 캐릭터의 좌표 [x, y]를 return하도록 solution 함수를 완성해주세요.
 [0, 0]은 board의 정 중앙에 위치합니다. 예를 들어 board의 가로 크기가 9라면 캐릭터는 왼쪽으로 최대 [-4, 0]까지 오른쪽으로 최대 [4, 0]까지 이동할 수 있습니다.
 '''
+# deque로 구현하는 이유: pop(0)보다는 popleft()의 시간 복잡도가 더 낮음
+def solution(keyinput, board):
+    first = 0
+    seceond = 0
+    
+    for _ in keyinput:
+        if _ == "left":
+            if -(board[0]//2) >= first:
+                first = (-board[0]//2) + 1
+            else: first -= 1
+            print("f:", first)
+        elif _ == "right":
+            if board[0]//2 <= first:
+                first = board[0]//2
+            else: first += 1
+            print("f:", first)
+        elif _ == "up":
+            if board[1]//2 <= seceond:
+                seceond = board[1]//2
+            else: seceond += 1
+            print("s:", seceond)
+        else:
+            if -(board[1]//2) >= seceond:
+                seceond = (-board[1]//2) + 1
+            else: seceond -= 1
+            print("s:", seceond)
+    return [first, seceond]
