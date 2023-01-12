@@ -5,4 +5,4 @@
 
 ### 🎖 2️⃣0️⃣2️⃣3️⃣ 0️⃣1️⃣ 1️⃣2️⃣ 🏆 
 Level 0 is complete.
-<img src="file:///Users/yangsangchu/Desktop/스크린샷%202023-01-12%2022.12.08.png">
+<img src="file:///Users/yangsangchu/Downloads/코딩테스트%20입문%20캘린더.png">
