@@ -48,3 +48,7 @@ for mul in range(1, 4, 1):
 
 print(result)
 print(numbox)
+
+x = 5
+y = 2
+print(x%y)
